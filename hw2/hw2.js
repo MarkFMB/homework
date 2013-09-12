@@ -16,6 +16,9 @@
 
 // Problem 1) Using JavaScript comments, write your name and today's date below
 
+// Mark Frederiksen
+// September 12, 2013
+
 
 // Problem 2) Create separate variables to store the following. 
 // Send all variables to the console.
@@ -29,11 +32,38 @@
 	// Whether or not Superman can fly
 
 
+	var myEmail = "mfrede15@montgomerycollege.edu";
+	var myMajor = "non-major";
+	var favTextEditor = "Notepad++";
+	var zip = "20880-0365";
+	var pi = 3.14159;
+	var totalCost = 10 * 1.05;
+	var lightSwitchOn = false;
+	var superManFly = true;
+
+	console.log(myEmail, ' ', myMajor);
+	console.log('Favorite Text Editor ', favTextEditor, ' Zip: ', zip);
+	console.log('Pi = ', pi);
+	console.log('Light Switch is on? ', lightSwitchOn);
+	console.log('Can Superman fly?  ', superManFly);
+
+
 // Problem 3) Use the typeof operator to determine the data type of each variable like so.
 	// console.log(typeof myEmail);
 	// console.log(typeof myMajor);
 	// and so on…
 	// Make sure you have at least one string, at least one number, and at least one Boolean.
+
+    console.log(' - - - - - - - - - ')
+	console.log('myEmail', ' is a ', typeof myEmail);
+	console.log('myMajor', ' is a ', typeof myMajor);
+	console.log('favTextEditor', ' is a ' , typeof favTextEditor);
+	console.log('zip', ' is a ' , typeof zip);
+
+	console.log('pi', ' is a ' , typeof pi);
+	console.log('lightSwitchOn', ' is a ' , typeof lightSwitchOn);
+	console.log('superManFly', ' is a ' , typeof superManFly);
+
 
 
 // Problem 4) Create string variables to store the following string values.
@@ -41,6 +71,16 @@
 	// The dog's biting my shoes
 	// <a href="#">Some link</a>
 	// JavaScript is "easy" if you are good at it
+
+	console.log(' - - - - - - - - - ')
+	var helpmessage = "The dog's biting my shoes";
+	var aRefLink = '<a href="#">Some link</a>';
+	var jsEasy = 'JavaScript is "easy" if you are good at it';
+
+	console.log(helpmessage);
+	console.log(aRefLink);
+	console.log(jsEasy);
+
 
 
 // Problem 5) Create an array of topics you would like to learn this semester.

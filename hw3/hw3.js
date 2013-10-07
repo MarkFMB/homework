@@ -22,10 +22,10 @@
 // 5 times 5
 // 5 divided by 5
 
-console.log("The sum: 5 + 5 = ", 5 + 5  );
-console.log("The difference: 5 - 5 = ", 5 - 5  );
-console.log("The product: 5 * 5 = ", 5 * 5  );
-console.log("The division: 5 / 5 = ", 5 / 5  );
+console.log("The sum: 5 + 5 = ", 5 + 5);
+console.log("The difference: 5 - 5 = ", 5 - 5);
+console.log("The product: 5 * 5 = ", 5 * 5);
+console.log("The division: 5 / 5 = ", 5 / 5);
 
 
 
@@ -48,24 +48,24 @@ console.log("The division: 5 / 5 = ", 5 / 5  );
 
 var cookieThief = 'Johnny';
 
-function response(who) {
+function response(cookieThief) { // JG: There was a bug with the argument name. It's fixed now.
 
 	switch (cookieThief) {
 
  		case "Dad":
- 			return("He’s going to be in trouble!");
+ 			return "He’s going to be in trouble!";
  			break;
  	 	
  	 	case "Mom":
- 			return("No big deal.");
+ 			return "No big deal.";
  			break;	
 
  		 case "Me":
- 			return("No more cookies for you.");
+ 			return "No more cookies for you.";
  			break;		
 
  		 default:
- 			return("Johnny did it.");
+ 			return "Johnny did it.";
  			break;		
 	}
 
@@ -93,24 +93,20 @@ console.log(response(cookieThief));
 console.log("-----------------");
 
 
-	var now = new Date();
-	console.log("Since it is now: ", now);
+var now = new Date(); // JG: Neat use of the date object
+console.log("Since it is now: ", now);
 
-	var dayOfWeek = now.getDay();
+var dayOfWeek = now.getDay();
+var hour = now.getHours();
+var minute = now.getMinutes();
 
+var room = "HU 317";
 
-	var hour = now.getHours();
-	var minute = now.getMinutes();
-
-	var room = "HU 317";
-
-	if (dayOfWeek === 2 && hour === 18 && minute === 30 && room === "HU 317") {
-
-		console.log("You are in CA276");
-
-	}
-	else
-		console.log("You are in another class");
+if (dayOfWeek === 5 && hour === 18 && minute === 30 && room === "HU 317") {
+	console.log("You are in CA276");
+} else {
+	console.log("You are in another class");
+}
 
 
 
@@ -139,17 +135,17 @@ console.log("-----------------");
 
 
 
-	var bartSimpson = '';
+var bartSimpson = '';
 
-	var i = 0;
+var i = 0;
 
-	while (i < 10) {
-		bartSimpson += 'I will not make fun of the teacher using JavaScript code.' + " "
-		i ++;
-	};
+while (i < 10) {
+	bartSimpson += 'I will not make fun of the teacher using JavaScript code.' + " "
+	i++;
+};
 
-	console.log("-----------------");
-	console.log(bartSimpson);
+console.log("-----------------");
+console.log(bartSimpson);
 
 
 
@@ -159,14 +155,12 @@ console.log("-----------------");
 
 
 
+// JG: Only need to reset bartSimpson because it is already declared. The variable "i" will be reset at the start of the for loop.
+bartSimpson = '';
 
-	var bartSimpson = '';
+for (i = 0; i < 10; i++) {
+	bartSimpson += 'I will not make fun of the teacher using JavaScript code.' + " ";
+};
 
-	var i;
-
-	for (var i = 0; i < 10; i++) {
-		bartSimpson += 'I will not make fun of the teacher using JavaScript code.' + " ";
-	};
-
-	console.log("-----------------");
-	console.log(bartSimpson);
+console.log("-----------------");
+console.log(bartSimpson);

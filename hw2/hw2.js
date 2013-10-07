@@ -33,22 +33,22 @@
 
     // NOTE: --- Using "strict mode"
 
-	"use strict";
+"use strict";
 
-	var myEmail = "mfrede15@montgomerycollege.edu";
-	var myMajor = "non-major";
-	var favTextEditor = "Notepad++";
-	var zip = "20880-0365";
-	var pi = 3.14159;
-	var totalCost = 10 * 1.05;
-	var lightSwitchOn = false;
-	var superManFly = true;
+var myEmail = "mfrede15@montgomerycollege.edu";
+var myMajor = "non-major";
+var favTextEditor = "Notepad++";
+var zip = "20880-0365";
+var pi = 3.14159;
+var totalCost = 10 * 1.05;
+var lightSwitchOn = false;
+var superManFly = true;
 
-	console.log(myEmail, ' ', myMajor);
-	console.log('Favorite Text Editor ', favTextEditor, ' Zip: ', zip);
-	console.log('Pi = ', pi);
-	console.log('Light Switch is on? ', lightSwitchOn);
-	console.log('Can Superman fly?  ', superManFly);
+console.log(myEmail, ' ', myMajor);
+console.log('Favorite Text Editor ', favTextEditor, ' Zip: ', zip);
+console.log('Pi = ', pi);
+console.log('Light Switch is on? ', lightSwitchOn);
+console.log('Can Superman fly?  ', superManFly);
 
 
 // Problem 3) Use the typeof operator to determine the data type of each variable like so.
@@ -57,15 +57,15 @@
 	// and so on…
 	// Make sure you have at least one string, at least one number, and at least one Boolean.
 
-    console.log(' - - - - - - - - - ')
-	console.log('myEmail', ' is a ', typeof myEmail);
-	console.log('myMajor', ' is a ', typeof myMajor);
-	console.log('favTextEditor', ' is a ' , typeof favTextEditor);
-	console.log('zip', ' is a ' , typeof zip);
+console.log(' - - - - - - - - - ')
+console.log('myEmail', ' is a ', typeof myEmail);
+console.log('myMajor', ' is a ', typeof myMajor);
+console.log('favTextEditor', ' is a ' , typeof favTextEditor);
+console.log('zip', ' is a ' , typeof zip);
 
-	console.log('pi', ' is a ' , typeof pi);
-	console.log('lightSwitchOn', ' is a ' , typeof lightSwitchOn);
-	console.log('superManFly', ' is a ' , typeof superManFly);
+console.log('pi', ' is a ' , typeof pi);
+console.log('lightSwitchOn', ' is a ' , typeof lightSwitchOn);
+console.log('superManFly', ' is a ' , typeof superManFly);
 
 
 
@@ -75,23 +75,23 @@
 	// <a href="#">Some link</a>
 	// JavaScript is "easy" if you are good at it
 
-	console.log(' - - - - - - - - - ');
-	var helpmessage = "The dog's biting my shoes";
-	var aRefLink = '<a href="#">Some link</a>';
-	var jsEasy = 'JavaScript is "easy" if you are good at it';
+console.log(' - - - - - - - - - ');
+var helpmessage = "The dog's biting my shoes";
+var aRefLink = '<a href="#">Some link</a>';
+var jsEasy = 'JavaScript is "easy" if you are good at it';
 
-	console.log(helpmessage);
-	console.log(aRefLink);
-	console.log(jsEasy);
+console.log(helpmessage);
+console.log(aRefLink);
+console.log(jsEasy);
 
 
 
 // Problem 5) Create an array of topics you would like to learn this semester.
 // Send this array to the console.
 
-	var topics = ["closure", "jQuery", "this"];
-	console.log(' - - - - - - - - - ');
-	console.log(topics);
+var topics = ["closure", "jQuery", "this"];
+console.log(' - - - - - - - - - ');
+console.log(topics);
 
 
 // Problem 6) Send each item of the last array to the console. 
@@ -100,14 +100,14 @@
 	// console.log(myArray[1])
 	// and so on…
 
-		console.log(topics[0]);
-		console.log(topics[1]);
-		console.log(topics[2]);
+console.log(topics[0]);
+console.log(topics[1]);
+console.log(topics[2]);
 
 // Problem 7) Use the yourArrayVariable.length property to determine the size of your array.
 // Send the result to the console.
 
-		console.log("Number of topic items = " + topics.length);
+console.log("Number of topic items = " + topics.length);
 
 // Problem 8) Create a function named "clickMe".
 // When the user clicks the button with the ID of "clickMe" send the string 
@@ -116,13 +116,13 @@
 	// a similar way to how we did it in class for the currency conversion
 	// calculator.
 
-	var button = document.getElementById("clickMe");
+var button = document.getElementById("clickMe");
 
-	function clickMe() {
-		console.log("Leave me alone");
-		};
+function clickMe() {
+	console.log("Leave me alone");
+};
 
-	button.onclick = clickMe;
+button.onclick = clickMe;
 
 
 	

@@ -77,20 +77,99 @@
 	<!-- Your answers go here -->
 	<script>
 		// Problem 1
+
+
+
+		var courseName = "CA 276 JavaScript";
+		var numDaysMarch = 31;
+		var knowJavaScript = true;
+		var bestRestInRockville = "Zio's";
+		var annualSalaryWebDev = 32500;
 		
 		
 		// Problem 2
+
+		console.log("-- Problem 2 ---------");
+
+		var drinkWithTax = 20 * 1.25;
+		console.log("Drink with 25% tax = $", drinkWithTax)
+
+		var phoneAfterDisc = 400 * 0.85;
+		console.log("Phone costing $400 less 15% discount = $", phoneAfterDisc);
+
+		var allSubs = 4 * 25;
+		console.log("Total of four subs at $5 each = $", allSubs);
 		
+		var eachPay = 75 / 5;
+		console.log("Total bill $75 split fife ways = $", eachPay);
+
+		var smallMult = 0.1 * 0.2;
+		console.log("On-tenth times two-tenths = ", smallMult.toFixed(2));
 		
 		// Problem 3
+
+		console.log("-- Problem 3 ---------");
+
+		var editor = "Sublime Text";
+
+
+		switch (editor) {
+
+			case "Eclipse": 
+				console.log("Java Developer");
+				break;
+
+			case "Aptana Studio": 
+				console.log("Web developer");
+				break;
+
+			case "Sublime Text": 
+				console.log("I am awesome");
+				break;								
+
+			case "Notepad": 
+				console.log("Wrong editor");
+				break;	
+
+		};
 		
 		
 		// Problem 4
+
+		console.log("-- Problem 4 ---------");
+
+		var i;
+
+		for (i=5; i<=15; i++) {
+			console.log("i = ", i);
+		}
 		
 		// Problem 5
+
+		console.log("-- Problem 5 ---------");
+
+		var a = 1;
+		var b = 2;
+		var c = 3;
+
+		function average(num1, num2, num3) {
+
+			if (typeof a === "number" && typeof b === "number" && typeof c === "number") {
+				return (num1 + num2 + num3)/3;
+			} else {
+				return NaN;
+			}
+		}
+
+		console.log("Test average function with: 1, 2, and 3 Average = ", average(a, b, c));
+
 		
 		
 		// Problem 6
+
+	console.log("-- Problem 5 ---------");
+		console.log("Hardest part of learning JavaScript:", "\n",
+			"Concept that function can be assigned to a variable.");
 		
 	</script>
 

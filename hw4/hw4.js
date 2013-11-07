@@ -171,12 +171,15 @@ function Athlete2(name, height, age, countryOrigin, medals, isOlympian) {
 //JG: What's the s prefix for? 
 //JG: If it means "string" why are the array and Boolean variables prepended with "s"?
 function Swimmer(sName, sAge, sCountry, sHeight, sMedalsArray, sOlympianTF, sBranding) {
-	this.name = sName;
-	this.height = sHeight; // in meters
-	this.age = sAge;
-	this.countryOrigin = sCountry;
-	this.medals = sMedalsArray;
-	this.isOlympian = sOlympianTF;
+	//JG: I didn't cover how to assign properties up the chain, so I present it here.
+	//JG: The proto property you see below (two underscores before and after) 
+	//JG: is your link up the prototype chain.
+	this.__proto__.name = sName;
+	this.__proto__.height = sHeight; // in meters
+	this.__proto__.age = sAge;
+	this.__proto__.countryOrigin = sCountry;
+	this.__proto__.medals = sMedalsArray;
+	this.__proto__.isOlympian = sOlympianTF;
 	this.branding = sBranding;
 
 	this.swim = function() {
@@ -189,3 +192,6 @@ Swimmer.prototype = new Athlete();
 Swimmer.prototype.constructor = Athlete;
 
 var s1 = new Swimmer('Michael Phelps', 28, 'USA', 1.93, ['gold', 'gold', 'silver'], true, 'Speedo');
+
+console.log(s1.hasOwnProperty('name')); //JG: Returns false
+console.log(s1.hasOwnProperty('branding')); //JG: returns true

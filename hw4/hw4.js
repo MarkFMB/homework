@@ -25,25 +25,29 @@
 // Problem 1
 // Create the object above by setting the properties one by one.
 
+//JG: I made all the code flush left to keep style consistent with all other submissions
 
 var athlete1 = {};
-// athlete.foo = "bar"
-// athlete.method = function () {
-// 
-	athlete1.name = "Joe";
-	athlete1.height = "1.95";  // in meters
-	athlete1.age = 23; // zero years at birth
-	athlete1.countryOrigin = "USA";
-	athlete1.medals = []; 
-	athlete1.isOlympian = true; 
+athlete1.name = "Joe";
+athlete1.height = "1.95"; // in meters
+//JG: Comment said "zero years at birth" when you're assigning a value. I got rid of the comment.
+athlete1.age = 23;
+athlete1.countryOrigin = "USA";
+athlete1.medals = [];
+athlete1.isOlympian = true;
 
-	athlete1.introduce = function () {
-		return("Hello! My name is ", this.name, "and I am from ", this.countryOrigin);
-	};
+athlete1.introduce = function() {
+	//JG: This only returns the string "USA"
+	// return ("Hello! My name is ", this.name, "and I am from ", this.countryOrigin);
 
-	athlete1.addMedal = function(MedalToAdd) {
-		this.medals.push(MedalToAdd);
-	};
+	return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
+};
+
+//JG: I converted MedalToAdd -> medalToAdd to keep camel casing. 
+//JG: Beginning capital letter means it's a prototype in JavaScript.
+athlete1.addMedal = function(medalToAdd) {
+	this.medals.push(medalToAdd);
+};
 
 
 
@@ -53,25 +57,23 @@ var athlete1 = {};
 
 
 var athlete2 = {};
-// athlete['foo'] = "bar"
-// athlete['method'] = function () {
-// 
-// }
 
-	athlete2['name'] = "Joe";
-	athlete2['height'] = "1.95";  // in meters
-	athlete2['age'] = 23; // zero years at birth
-	athlete2['countryOrigin'] = "USA";
-	athlete2['medals'] = 3; 
-	athlete2['isOlympian'] = true; 
+athlete2['name'] = "Joe";
+athlete2['height'] = "1.95"; // in meters
+athlete2['age'] = 23;
+athlete2['countryOrigin'] = "USA";
+//JG: You used the push method later on, but this wasn't made an array
+athlete2['medals'] = [];
+athlete2['isOlympian'] = true;
 
-	athlete2['introduce'] = function () {
-		return("Hello! My name is ", this.name, "and I am from ", this.countryOrigin);
-	};
+athlete2['introduce'] = function() {
+	//JG: I'm using associative array syntax within the methods as well
+	return "Hello! My name is " + this['name'] + " and I am from " + this['countryOrigin'];
+};
 
-	athlete2['addMedal'] = function(MedalToAdd) {
-				this.medals.push(MedalToAdd);
-	};
+athlete2['addMedal'] = function(medalToAdd) {
+	this['medals'].push(medalToAdd);
+};
 
 
 
@@ -82,19 +84,19 @@ var athlete2 = {};
 var athlete3 = {
 	// set key/value pairs inside here
 
-	name : "Joe",
-	height : "1.95",  // in meters
-	age : 23, // zero years at birth
-	countryOrigin : "USA",
-	medals : [],
-	isOlympian : true, 
+	name: "Joe",
+	height: "1.95", // in meters
+	age: 23, // zero years at birth
+	countryOrigin: "USA",
+	medals: [],
+	isOlympian: true,
 
-	introduce : function () {
-		return("Hello! My name is ", this.name, "and I am from ", this.countryOrigin);
+	introduce: function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
 	},
 
-	addMedal : function(numMedalsToAdd) {
-		this.medals.push(MedalToAdd);
+	addMedal: function(medalToAdd) {
+		this.medals.push(medalToAdd);
 	},
 };
 
@@ -105,24 +107,39 @@ var athlete3 = {
 // https://github.com/galdamez/ca276-fall2013/blob/master/week8/prototypes.html
 
 function Athlete() {
-
 	this.name = "";
-	this.height = "0";  // in meters
+	this.height = "0"; // in meters
 	this.age = 0; // zero years at birth
 	this.countryOrigin = "unknown";
-	this.medals = []; 
-	this.isOlympian = false; 
+	this.medals = [];
+	this.isOlympian = false;
 
-	this.introduce = function () {
-		return("Hello! My name is ", this.name, "and I am from ", this.countryOrigin);
+	this.introduce = function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
 	};
 
-	this.addMedal = function(MedalToAdd) {
-			this.medals.push(MedalToAdd);
+	this.addMedal = function(medalToAdd) {
+		this.medals.push(medalToAdd);
 	};
 }
 
+//JG: This one actually takes arguments
+function Athlete2(name, height, age, countryOrigin, medals, isOlympian) {
+	this.name = name;
+	this.height = height; // in meters
+	this.age = age;
+	this.countryOrigin = countryOrigin;
+	this.medals = medals;
+	this.isOlympian = isOlympian;
 
+	this.introduce = function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
+	};
+
+	this.addMedal = function(medalToAdd) {
+		this.medals.push(medalToAdd);
+	};
+}
 
 // PROBLEM BELOW IS OPTIONAL
 
@@ -151,24 +168,24 @@ function Athlete() {
 // 
 // s1.swim();
 
+//JG: What's the s prefix for? 
+//JG: If it means "string" why are the array and Boolean variables prepended with "s"?
 function Swimmer(sName, sAge, sCountry, sHeight, sMedalsArray, sOlympianTF, sBranding) {
-
 	this.name = sName;
-	this.height = sHeight;  // in meters
-	this.age = sAge; // zero years at birth
+	this.height = sHeight; // in meters
+	this.age = sAge;
 	this.countryOrigin = sCountry;
-	this.medals = sMedalsArray; 
-	this.isOlympian = sOlympianTF; 
+	this.medals = sMedalsArray;
+	this.isOlympian = sOlympianTF;
 	this.branding = sBranding;
 
-
-		this.swim = function() {
-			return("Splash splash splash");
+	this.swim = function() {
+		return "Splash splash splash";
 	};
 };
 
 Swimmer.prototype = new Athlete();
+//JG: You also need a constructor
+Swimmer.prototype.constructor = Athlete;
 
 var s1 = new Swimmer('Michael Phelps', 28, 'USA', 1.93, ['gold', 'gold', 'silver'], true, 'Speedo');
-
-

@@ -47,11 +47,11 @@ console.log(document.querySelectorAll('ol li:nth-child(2), ul li:nth-child(2)'))
 
 // All elements that are empty
 
-console.log(document.querySelectorAll('*:empty'));
+console.log(document.querySelectorAll(':empty'));
 
 // All elements that are checked
 
-console.log(document.querySelectorAll('*:checked'));
+console.log(document.querySelectorAll(':checked'));
 
 // All radio buttons
 
@@ -59,7 +59,7 @@ console.log(document.querySelectorAll('[type="radio"]'));
 
 // All radio buttons that are checked
 
-console.log(document.querySelectorAll('input:checked[type="radio"]'));
+console.log(document.querySelectorAll('[type="radio"]:checked'));
 
 // All TDs that represent the 2nd column in the table with ID "names"
 
@@ -67,7 +67,7 @@ console.log(document.querySelectorAll('#names td:nth-child(2)'));
 
 // All elements with the class name "hidden" that are not form elements
 
-console.log(document.querySelectorAll('*:not(form)[class="hidden"]'));
+console.log(document.querySelectorAll('.hidden:not(form)'));
 
 // All even TRs that are descendants of a TBODY
 
